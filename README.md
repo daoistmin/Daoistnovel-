@@ -10,6 +10,19 @@
       font-family: 'Segoe UI', sans-serif;
       background: #0a0f24;
       color: #fff;
+      <div id="novelsList">
+  <div class="novel-item">
+    <span>Minha Light Novel</span>
+    <button onclick="deleteNovel(this)">Excluir</button>
+  </div>
+</div>
+
+<div id="chaptersList">
+  <div class="chapter-item">
+    <span>Capítulo 1</span>
+    <button onclick="deleteChapter(this)">Excluir</button>
+  </div>
+</div>
     }
 
     header {
