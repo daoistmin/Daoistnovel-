@@ -107,6 +107,17 @@
     <textarea id="novelDescription" placeholder="Descrição"></textarea>
     <button onclick="saveNovel()">Salvar</button>
     <div id="novelList"></div>
+    function deleteNovel(button) {
+  if (confirm("Tem certeza que quer excluir essa Light Novel?")) {
+    button.parentElement.remove();
+  }
+}
+
+function deleteChapter(button) {
+  if (confirm("Tem certeza que quer excluir esse capítulo?")) {
+    button.parentElement.remove();
+  }
+}
   </div>
 
   <div id="addChapter" class="section">
