@@ -13,16 +13,7 @@
       <div id="novelsList">
   <div class="novel-item">
     <span>Minha Light Novel</span>
-    <button onclick="deleteNovel(this)">Excluir</button>
-  </div>
-</div>
-
-<div id="chaptersList">
-  <div class="chapter-item">
-    <span>Capítulo 1</span>
-    <button onclick="deleteChapter(this)">Excluir</button>
-  </div>
-</div>
+    
     }
 
     header {
@@ -110,6 +101,7 @@
   <button onclick="showSection('addNovel')">Adicionar Light Novel</button>
   <button onclick="showSection('addChapter')">Adicionar Capítulo</button>
   <button onclick="showSection('comments')">Comentários</button>
+  <button onclick="deleteItem(this)">Excluir</button>
 </nav>
 
 <main>
@@ -120,16 +112,7 @@
     <textarea id="novelDescription" placeholder="Descrição"></textarea>
     <button onclick="saveNovel()">Salvar</button>
     <div id="novelList"></div>
-    function deleteNovel(button) {
-  if (confirm("Tem certeza que quer excluir essa Light Novel?")) {
-    button.parentElement.remove();
-  }
-}
-
-function deleteChapter(button) {
-  if (confirm("Tem certeza que quer excluir esse capítulo?")) {
-    button.parentElement.remove();
-  }
+    
 }
   </div>
 
@@ -153,6 +136,16 @@ function deleteChapter(button) {
   function showSection(id) {
     document.querySelectorAll('.section').forEach(s => s.classList.remove('visible'));
     document.getElementById(id).classList.add('visible');
+    function deleteItem(button) {
+  // Pega o elemento pai do botão (a div ou elemento da novel/capítulo)
+  const item = button.parentElement;
+
+  // Remove ele da tela
+  item.remove();
+
+  // Aqui você poderia adicionar um alerta ou console log se quiser
+  console.log("Item excluído!");
+    }
   }
 
   function saveNovel() {
