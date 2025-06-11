@@ -112,11 +112,18 @@
     <textarea id="novelDescription" placeholder="Descrição"></textarea>
     <button onclick="saveNovel()">Salvar</button>
     <div id="novelList"
-}function deleteItem(button) {
-  const item = button.parentElement;
-  item.remove();
-}
-}
+
+}<div id="novel-list">
+  <div class="novel-item">
+    <span>Minha Light Novel</span>
+    <button onclick="deleteItem(this)">Excluir</button>
+  </div>
+
+  <div class="novel-item">
+    <span>Outra Light Novel</span>
+    <button onclick="deleteItem(this)">Excluir</button>
+  </div>
+</div>
   </div>
 
   <div id="addChapter" class="section">
@@ -148,6 +155,9 @@
 
   // Aqui você poderia adicionar um alerta ou console log se quiser
   console.log("Item excluído!");
+    }function deleteItem(button) {
+  const item = button.parentElement;
+  item.remove();
     }
   }
 
