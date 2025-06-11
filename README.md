@@ -111,8 +111,8 @@
     <input type="file" id="novelCover">
     <textarea id="novelDescription" placeholder="Descrição"></textarea>
     <button onclick="saveNovel()">Salvar</button>
-    <div id="novelList"></div>
-    function deleteItem(button) {
+    <div id="novelList"
+}function deleteItem(button) {
   const item = button.parentElement;
   item.remove();
 }
