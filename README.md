@@ -112,7 +112,10 @@
     <textarea id="novelDescription" placeholder="Descrição"></textarea>
     <button onclick="saveNovel()">Salvar</button>
     <div id="novelList"></div>
-    
+    function deleteItem(button) {
+  const item = button.parentElement;
+  item.remove();
+}
 }
   </div>
 
